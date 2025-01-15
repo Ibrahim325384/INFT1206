@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 
 <!-- Note that the html land="en" is a paired tag that has its close tag at the end -->
+<!--- Main, header and so on provide structres with CSS -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
     <title>inft206</title>
 </head>
 <body>
     
 </body>
-    <!-- Inserts an image, width resizes it, alt displays text if there is an issue with the text -->
-     <!-- It is prefered to have a seperate folder for images -->
-    <img width = "150" src="./images/imageexample.jpg" alt="my logo">
-    
-    <!-- This takes the user to a link within our own website when clicked on -->
-    <a href="./week1/example.html">Week 1</a>
+    <header>
+          <!-- h1 + tab to make a heading paired tag --> 
+          <h1>INFT1206: Web Fundamental</h1>
 
-
-    <!-- h1 + tab to make a heading paired tag --> 
-    <h1>INFT1206: Web Fundamental</h1>
+        <!-- Inserts an image, width resizes it, alt displays text if there is an issue with the text -->
+         <!-- It is prefered to have a seperate folder for images -->
+        <img width = "150" src="./images/imageexample.jpg" alt="my logo">
+        <nav>
+            <ul>
+                <li>
+                    <a href="./index.html">Homepage</a>
+                </li>
+                <li>
+                    <!-- This takes the user to a link within our own website when clicked on -->
+                    <a href="./week1/example.html">Week 1</a>
+                </li>
+                <li><a href="">Week 2</a></li>
+                <li><a href="">Week 3</a></li>
+            </ul>
+        </nav> 
+    </header>
 
     <!-- The same as above can be done with p instead of h1 to make a paragraph -->
     <!-- a + tab creates a hyperlink, target="_blank" makes it so that when linked clicked it will open in a new tab -->
     <!-- The target="_blank" can be before or after a href -->
     <!-- Alt + w wraps a selected word in a paragraph tag, which over here is changed to strong (makes words bold) -->
      <!-- em tag itacilizes text -->
-    <p>This <em>website</em> is for <strong>INFT1206</strong> course at <a href="https://durhamcollege.ca/" target="_blank">Durham College</a> </p>
-    
-    
-    <!-- Type lorem to generate words to be a filler for later text --> 
-     <!-- The number of needed words can be inputed with a number after lorem, example lorem10 -->
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae suscipit ullam enim voluptates sapiente laboriosam omnis perferendis at debitis. Labore exercitationem magni, officia totam aperiam quam nostrum dolor eius esse!</p>
-    <p>@2025 Khan</p>
+    <main>
+        <article>
+            <p>This <em>website</em> is for <strong>INFT1206</strong> course at <a href="https://durhamcollege.ca/" target="_blank">Durham College</a> </p>
+            
+            
+            <!-- Type lorem to generate words to be a filler for later text --> 
+             <!-- The number of needed words can be inputed with a number after lorem, example lorem10 -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae suscipit ullam enim voluptates sapiente laboriosam omnis perferendis at debitis. Labore exercitationem magni, officia totam aperiam quam nostrum dolor eius esse!</p>
+        </article>
+    </main>
+    <footer><p>@2025 Khan</p></footer>
 </html>
 
 <!-- The a blank template version of the above was made with ! + tab -->
