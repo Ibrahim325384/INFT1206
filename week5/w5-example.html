@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS styling for the whole page, p selects all p tags, this is internal CSS, these only apply to this page -->
+    <style>
+        p{
+            color: green;
+            background-color: yellow;
+        }   
+
+        .internal{
+            color: brown;
+        }     
+    </style>
+
+    <!-- This is external CSS -->
+    <link rel="stylesheet" href="../css/week5.css">
+    <title>Week 5</title>
+</head>
+<body>
+    <h1>Week 5: Introduction to CSS</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem enim ut, excepturi reiciendis quod quisquam accusamus modi aliquid obcaecati nisi eos cupiditate praesentium, doloremque delectus provident sapiente ea. Vel, ipsa.</p>
+    
+    <!-- This is the 1st way to add CSS -->
+    <h2 style="color: red; text-align: center;">Inline CSS</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum alias asperiores, praesentium nostrum totam quaerat sit impedit qui magnam ipsa consequatur quisquam sunt earum corrupti nam tempora est, quia cum!</p>
+
+    <!-- This is the 2nd way to add CSS -->
+    <h2 class="internal">Internal CSS</h2>
+    <p class="internal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut mollitia suscipit eos nisi at officia reiciendis, et necessitatibus incidunt saepe, provident error? Totam, error debitis! Molestias, inventore odit. Voluptate, culpa?</p>
+
+    <!-- This is the 3rd way to add CSS -->
+    <h3 id="id1">External CSS</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem exercitationem alias sed tenetur voluptatem doloremque aliquam, nobis praesentium aspernatur est fuga suscipit sunt fugiat doloribus eveniet recusandae nulla dolores beatae?</p>
+</body>
+</html>
