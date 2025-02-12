@@ -8,7 +8,7 @@
      Date: February 2, 2025
      Desc: Program creates site and embeds multimedia -->
 
-    <title>Table template</title>
+    <title>Planet Table</title>
     <link href="minimal-table.css" rel="stylesheet" type="text/css">
     <style>
         html {
@@ -54,6 +54,7 @@
         <caption>Data about the planets of our solar system (Planetary facts taken from <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>)</caption>
         <thead>
             <tr>
+                <td colspan="4"></td>
                 <td>Name</td>
                 <td>Mass (10<sup>24</sup>kg)</td>
                 <td>Diameter (km)</td>
@@ -68,7 +69,7 @@
         </thead>
         <tbody>
             <tr>
-                <td rowspan="4">Terrestrial planets</td>
+                <td rowspan="5" colspan="4">Terrestrial planets</td>
             </tr>
             
             <tr>
@@ -123,12 +124,11 @@
             </tr>
 
             <tr>
-                <td rowspan="4">Jovian Planets</td>
-                <td rowspan="2">Ice Giants</td>
-                <td rowspan="2">Gas Giants</td>
+                <td rowspan="5" colspan="1">Jovian Planets</td>
             </tr>
                 
             <tr>
+                <td rowspan="2" colspan="3">Ice Giants</td>
                 <td>Jupiter</td>
                 <td>1898</td>
                 <td>142,984</td>
@@ -136,7 +136,6 @@
                 <td>23.1</td>
                 <td>9.9</td>
                 <td>778.6</td>
-                <td></td>
                 <td>-110</td>
                 <td>67</td>
                 <td>The largest planet</td>
@@ -157,6 +156,7 @@
                
 
             <tr>
+                <td rowspan="2" colspan="3">Gas Giants</td>
                 <td>Uranus</td>
                 <td>86.8</td>
                 <td>51,118</td>
@@ -179,10 +179,9 @@
                 <td>-200</td>
                 <td>14</td>
             </tr>
+          
             <tr>
-                <td>Dwarf Planets</td>
-            </tr>
-            <tr>
+                <td rowspan="1" colspan="4">Dwarf Planets</td>
                 <td>Pluto</td>
                 <td>0.0146</td>
                 <td>2,370</td>
