@@ -17,7 +17,8 @@
   }
 
   img {
-      max-width: 100%;
+      max-width: 70%;
+      max-height: 50%;
       display: block;
   }
   
@@ -32,11 +33,15 @@
     margin: 0 auto;
     padding: 0 20px;
     max-width: 980px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
   }
   
   nav {
     background-color: #000;
-    padding: .5em;
+    padding: 0.5em;
+    overflow: scroll;
   }
   
   nav ul {
@@ -44,11 +49,15 @@
     padding: 0;
     list-style: none;
   }
+
+  nav li {
+    display: inline;
+  }
   
   nav a {
     color: #fff;
     text-decoration: none;
-    padding: .5em 1em;
+    padding: 0.5em 1em;
   }
   
   .photos {
