@@ -1,0 +1,10 @@
+console.log("Hello")
+
+function multiplyNums(){
+    let num1 = document.querySelector("#first-num").value;
+    let num2 = document.querySelector("#second-num").value;
+    let value = num1 * num2;
+    document.querySelector("#output").textContent = "The multiplication of " + num1 + " and " + num2 + " is " + value;
+}
+
+document.querySelector("#btn").addEventListener("click", multiplyNums)
