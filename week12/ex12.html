@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 12: Introduction to Form</title>
+    <script>
+        function validate(){
+            let fname = document.querySelector('#fname').value.trim();
+            if (fname.length==0){
+                document.querySelector('#fname-error').textContent = "Give a first name";
+                return false;
+            }
+            else if (fname.length<5){
+                document.querySelector('#fname-error').textContent = "First Name must be at least 5 letters";
+                return false;
+            }
+            return true
+        }
+    </script>
+</head>
+<body>
+    <h1>Week 12: Introduction to Form</h1>
+    <form action="#" method="get" onsubmit="return validate()">
+        <div>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" title="First Name">
+            <span id='fname-error'></span>
+        </div>
+        <div>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="First Name">
+        </div>
+        <div>
+            <label for="pass">Password: </label>
+            <input type="password" id="pass" name="pass">
+        </div>
+        <div>
+            <label for="assignment">Upload your assignment</label>
+            <input type="file" id="assignment">
+        </div>
+        <div>
+            <p>
+                What are your hobbies and interests?
+            </p>
+            <input type="checkbox" id="interests1" name="interests" value="sports">
+            <label for="interests1">Sports</label>
+            <label for="interests">Music</label>
+        </div>
+        <div>
+            <p>Which OS do you prefer?</p>
+            <input type="radio" id="os1" name="OS" value="Windows">
+            <label for="os1">Windows</label>
+            <input type="radio" name="os" id="os2">
+            <label for="os2">OS2</label>
+        </div>
+        <div>
+            <label for="course">What is your current course?</label>
+            <input type="text" id="course" name="course" list="list1">
+            <datalist id="list1">
+                <option value="inft1206">Inft1206</option>
+                <option value="inft2100">Inft2100</option>
+            </datalist>
+        </div>
+        <div>
+            <label for="weekend">What do you want to do this weekend?</label>
+            <select name="weekend" id="weekend">
+                <option value="Coffee">Drink Coffee</option>
+                <option value="Book">Read a book</option>
+                <option>Take a walk</option>
+            </select>
+        </div>
+        <div>
+            <label for="">How is the web devlopment going so far?</label>
+            <textarea name="web" id="web" rows="5" cols="20">
+                
+            </textarea>
+        </div>
+    
+        <div>
+            <input type="submit" value="Go">
+            <input type="reset">
+        </div>
+        
+    </form>
+</body>
+</html>
