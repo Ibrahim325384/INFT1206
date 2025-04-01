@@ -25,3 +25,18 @@ for (i = 0; i <= image.length; i++){
 
 
 /* Wiring up the Darken/Lighten button */
+btn.getAttribute()
+
+if (btn.getAttribute() == "dark"){
+    btn.textContent = "Lighten";
+    btn.setAttribute("light", btn.textContent);
+    overlay.style.backgroundColor = "rgb(0 0 0 / 50%)";
+}
+
+else if (btn.getAttribute() == "light"){
+    btn.textContent = "Darken";
+    btn.setAttribute("Dark", btn.textContent);
+    overlay.style.backgroundColor = "rgb(0 0 0 / 0%)";
+    
+}
+
