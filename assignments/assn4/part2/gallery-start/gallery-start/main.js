@@ -1,6 +1,7 @@
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
+
 const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
@@ -12,10 +13,14 @@ const altText = ["image 1", "image 2", "image 3", "image 4", "image 5"];
 
 /* Looping through images */
 for (i = 0; i <= image.length; i++){
+
     const newImage = document.createElement('img');
+    xxx = image[i];
     newImage.setAttribute('src', xxx);
+    xxx = altText[i];
     newImage.setAttribute('alt', xxx);
-    thumbBar.appendChild(newImage); 
+    thumbBar.appendChild(newImage);
+    thumbBar.addEventListener("click");
 }
 
 
