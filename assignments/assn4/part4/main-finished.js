@@ -23,8 +23,26 @@ function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
-class Ball {
+class Shape {
+    constructor(x, y, velX, velY, color, size) {
+        this.x = x;
+        this.y = y;
+        this.velX = velX;
+        this.velY = velY;
+        
+      }
+}
+
+class Ball extends Shape {
   constructor(x, y, velX, velY, color, size) {
+    super.x = x;
+    super.y = y;
+    super.velX = velX;
+    super.velY = velY;
+    super.color = color;
+    super.size = size;
+    exists = true;
+
     this.x = x;
     this.y = y;
     this.velX = velX;
