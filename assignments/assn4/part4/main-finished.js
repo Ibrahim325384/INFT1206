@@ -95,6 +95,18 @@ class Ball extends Shape {
   
 }
 
+class EvilCircle extends Shape {
+    constructor(x, y){
+        super.x = x;
+        super.y = y;
+        super.velX = 20;
+        super.velY = 20;
+        super.color = white;
+        super.size = 10;
+    }
+
+}
+
 const balls = [];
 
 while (balls.length < 25) {
