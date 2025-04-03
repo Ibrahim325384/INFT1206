@@ -1,5 +1,8 @@
 // setup canvas
-
+// Name: Ibrahim Khan
+// Student Number: 100961620
+// Date: March 21, 2025
+// Desc: Part 3 of Assignment 4 
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
