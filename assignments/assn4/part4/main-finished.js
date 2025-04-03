@@ -11,6 +11,8 @@ const ctx = canvas.getContext("2d");
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
+let ballCount = 0;
+
 // function to generate random number
 
 function random(min, max) {
@@ -190,9 +192,19 @@ function loop() {
     ball.draw();
     ball.update();
     ball.collisionDetect();
+
+    EvilCircle.draw();
+    EvilCircle.update();
+    EvilCircle.collisionDetect();
+
+    ballCount++;
+    if (ball.exists == false){
+        ballCount--;
+    }
   }
 
   requestAnimationFrame(loop);
 }
 
-loop();
+loop()
+
