@@ -54,6 +54,7 @@ class Ball extends Shape {
   draw() {
     ctx.beginPath();
     ctx.fillStyle = this.color;
+    ctx.strokeStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -119,10 +120,48 @@ class EvilCircle extends Shape {
                 break;
             }
           });
-          
     }
-    
 
+    draw() {
+        ctx.beginPath();
+        lineWidth = 3;
+        ctx.fill = this.color;
+        ctx.stroke = this.color;
+        ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+        ctx.fill();
+      }
+
+      update() {
+        if (this.x + this.size >= width) {
+          this.x = -Math.abs(this.x);
+        }
+    
+        if (this.x - this.size <= 0) {
+          this.x = Math.abs(this.x);
+        }
+    
+        if (this.y + this.size >= height) {
+          this.y = -Math.abs(this.y);
+        }
+    
+        if (this.y - this.size <= 0) {
+          this.y = Math.abs(this.y);
+        }
+      }
+
+      collisionDetect() {
+        for (const ball of balls) {
+          if (ball.exists) {
+            const dx = this.x - ball.x;
+            const dy = this.y - ball.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+      
+            if (distance < this.size + ball.size) {
+              ball.exists = false;
+            }
+          }
+        }
+      }
 }
 
 const balls = [];
